@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="贵州医科大学骨科医工融合与临床转化实验室 | Orthopedic Medical Engineering Integration and Clinical Translation Laboratory, Guizhou Medical University" />
+  <meta name="description" content="贵州医科大学骨科医工融合与临床转化重点实验室 | Orthopedic Medical Engineering Integration and Clinical Translation Laboratory, Guizhou Medical University" />
   <meta name="keywords" content="贵州医科大学,骨科,医工融合,临床转化,骨科生物力学,骨组织工程,Bone Lab,GMU Bone Lab,Orthopedic Engineering" />
-  <meta property="og:title" content="GMU Bone Lab | 贵州医科大学骨科医工融合与临床转化实验室" />
+  <meta property="og:title" content="GMU Bone Lab | 贵州医科大学骨科医工融合与临床转化重点实验室" />
   <meta property="og:description" content="Bridging orthopedic medicine, engineering and clinical translation for next-generation bone health solutions." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.gmubonelab.org" />
@@ -17,7 +17,7 @@
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/icon-192.png" />
   <link rel="apple-touch-icon" sizes="192x192" href="/assets/img/icon-192.png" />
 
-  <title>GMU Bone Lab | 贵州医科大学骨科医工融合与临床转化实验室</title>
+  <title>GMU Bone Lab | 贵州医科大学骨科医工融合与临床转化重点实验室</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -87,7 +87,7 @@
     }
     .member-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 18px 40px -20px rgba(10, 61, 98, 0.35);
+      box-shadow: 0 18px 40px -20px rgba(104, 28, 18, 0.25);
     }
 
     /* Pub item */
@@ -96,8 +96,8 @@
       transition: border-color .2s ease, background-color .2s ease;
     }
     .pub-item:hover {
-      border-left-color: #c0392b;
-      background-color: #f8fafc;
+      border-left-color: #681c12;
+      background-color: #fdf9f5;
     }
 
     /* Avatar fallback (initials) */
@@ -107,6 +107,38 @@
       font-weight: 700;
       letter-spacing: 0.02em;
     }
+
+    /* KPI card */
+    .kpi-card {
+      background: linear-gradient(180deg, #ffffff 0%, #fdf5f3 100%);
+      border: 1px solid #f1b6ab;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .kpi-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px -15px rgba(104, 28, 18, 0.35);
+    }
+
+    /* Tabs */
+    .tab-btn {
+      padding: 0.6rem 1.1rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #475569;
+      border: 1px solid #e2e8f0;
+      background: #ffffff;
+      transition: all .2s ease;
+      cursor: pointer;
+    }
+    .tab-btn:hover { color: #681c12; border-color: #681c12; }
+    .tab-btn.active {
+      color: #ffffff;
+      background: #681c12;
+      border-color: #681c12;
+    }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
 
     /* Mobile menu */
     .mobile-menu { transform: translateY(-12px); opacity: 0; pointer-events: none; transition: all .2s ease; }
@@ -134,7 +166,7 @@
              width="64" height="64" />
         <div class="lg:hidden leading-tight">
           <div class="font-semibold text-brand-700 text-sm" data-i18n="brand.name">GMU Bone Lab</div>
-          <div class="text-[10px] text-slate-500 hidden sm:block" data-i18n="brand.sub">骨科医工融合与临床转化实验室</div>
+          <div class="text-[10px] text-slate-500 hidden sm:block" data-i18n="brand.sub">骨科医工融合与临床转化重点实验室</div>
         </div>
       </a>
 
@@ -142,7 +174,7 @@
         <a href="#home"        class="hover:text-brand-600" data-i18n="nav.home">首页</a>
         <a href="#about"       class="hover:text-brand-600" data-i18n="nav.about">实验室简介</a>
         <a href="#members"     class="hover:text-brand-600" data-i18n="nav.members">团队成员</a>
-        <a href="#publications" class="hover:text-brand-600" data-i18n="nav.publications">论文</a>
+        <a href="#publications" class="hover:text-brand-600" data-i18n="nav.publications">科研产出</a>
         <a href="#contact"     class="hover:text-brand-600" data-i18n="nav.contact">联系我们</a>
       </nav>
 
@@ -162,7 +194,7 @@
         <a href="#home"        data-i18n="nav.home">首页</a>
         <a href="#about"       data-i18n="nav.about">实验室简介</a>
         <a href="#members"     data-i18n="nav.members">团队成员</a>
-        <a href="#publications" data-i18n="nav.publications">论文</a>
+        <a href="#publications" data-i18n="nav.publications">科研产出</a>
         <a href="#contact"     data-i18n="nav.contact">联系我们</a>
       </nav>
     </div>
@@ -174,13 +206,13 @@
       <div class="reveal">
         <div class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-accent-500 mb-4">
           <span class="w-2 h-2 rounded-full bg-accent-500"></span>
-          <span data-i18n="hero.eyebrow">贵州医科大学 · 骨科与临床转化</span>
+          <span data-i18n="hero.eyebrow">贵州医科大学 · 校级重点实验室</span>
         </div>
         <h1 class="font-serif text-3xl md:text-5xl font-bold leading-tight text-brand-800" data-i18n="hero.title">
-          骨科医工融合与临床转化实验室
+          骨科医工融合与临床转化<br>重点实验室
         </h1>
         <p class="mt-5 text-base md:text-lg text-slate-600 leading-relaxed" data-i18n="hero.tagline">
-          融合临床骨科、生物材料与医学工程，探索面向骨健康与骨修复的下一代解决方案。
+          以临床实际需求为导向，融合骨外科学、医学工程、生物材料与人工智能。
         </p>
         <div class="mt-8 flex flex-wrap gap-3">
           <a href="#about" class="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-brand-600 text-white font-medium hover:bg-brand-700 transition">
@@ -192,19 +224,19 @@
           </a>
         </div>
 
-        <!-- Stat strip -->
+        <!-- Stat strip — 大数字 + 小标签 -->
         <div class="mt-12 grid grid-cols-3 gap-6 max-w-md">
           <div>
-            <div class="text-2xl md:text-3xl font-bold text-brand-700" data-stat>20+</div>
-            <div class="text-xs text-slate-500 mt-1" data-i18n="hero.stat1">研究人员</div>
+            <div class="text-3xl md:text-4xl font-bold text-brand-700" data-i18n="hero.stat1.n">26</div>
+            <div class="text-xs text-slate-500 mt-1" data-i18n="hero.stat1.t">SCI 论文</div>
           </div>
           <div>
-            <div class="text-2xl md:text-3xl font-bold text-brand-700" data-stat>100+</div>
-            <div class="text-xs text-slate-500 mt-1" data-i18n="hero.stat2">SCI 论文</div>
+            <div class="text-3xl md:text-4xl font-bold text-brand-700" data-i18n="hero.stat2.n">6</div>
+            <div class="text-xs text-slate-500 mt-1" data-i18n="hero.stat2.t">医疗器械备案证</div>
           </div>
           <div>
-            <div class="text-2xl md:text-3xl font-bold text-brand-700" data-stat>15+</div>
-            <div class="text-xs text-slate-500 mt-1" data-i18n="hero.stat3">国家级课题</div>
+            <div class="text-3xl md:text-4xl font-bold text-brand-700" data-i18n="hero.stat3.n">8</div>
+            <div class="text-xs text-slate-500 mt-1" data-i18n="hero.stat3.t">国家自然科学基金</div>
           </div>
         </div>
       </div>
@@ -212,7 +244,6 @@
       <!-- Decorative block: 校徽 + 装饰几何 -->
       <div class="reveal hidden md:block">
         <div class="relative aspect-square rounded-2xl bg-white shadow-xl border border-brand-100 overflow-hidden flex items-center justify-center">
-          <!-- 背景几何装饰 -->
           <svg viewBox="0 0 400 400" class="absolute inset-0 w-full h-full">
             <defs>
               <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
@@ -221,7 +252,6 @@
               </radialGradient>
             </defs>
             <rect width="400" height="400" fill="url(#bgGlow)"/>
-            <!-- 微弱网格 -->
             <g opacity="0.06" stroke="#681c12" stroke-width="1">
               <line x1="0" y1="80"  x2="400" y2="80"/>
               <line x1="0" y1="160" x2="400" y2="160"/>
@@ -232,15 +262,12 @@
               <line x1="240" y1="0" x2="240" y2="400"/>
               <line x1="320" y1="0" x2="320" y2="400"/>
             </g>
-            <!-- 装饰圆环 -->
             <circle cx="200" cy="200" r="170" fill="none" stroke="#681c12" stroke-width="1" opacity="0.15"/>
             <circle cx="200" cy="200" r="190" fill="none" stroke="#b8945c" stroke-width="1" opacity="0.20"/>
-            <!-- 金色点缀 -->
             <circle cx="340" cy="60"  r="6" fill="#b8945c" opacity="0.6"/>
             <circle cx="60"  cy="340" r="4" fill="#b8945c" opacity="0.5"/>
             <circle cx="60"  cy="60"  r="3" fill="#681c12" opacity="0.4"/>
           </svg>
-          <!-- 真实校徽放置中央 -->
           <img src="/assets/img/icon-512.png" alt="GMU Bone Lab Seal"
                class="relative w-2/3 h-2/3 object-contain drop-shadow-md"
                width="512" height="512" />
@@ -257,42 +284,83 @@
         <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-800 section-title" data-i18n="about.title">医工融合，赋能骨健康</h2>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-10 items-start">
-        <p class="text-slate-700 leading-relaxed text-base md:text-lg reveal" data-i18n="about.body">
-          贵州医科大学骨科医工融合与临床转化实验室依托附属医院骨科与工程学科平台，聚焦骨损伤修复、骨代谢疾病、骨科生物材料与智能医疗器械研发，强调从基础研究到临床应用的全链条转化。
-          实验室拥有从分子细胞、动物模型到临床转化的完整研究链条，承担多项国家自然科学基金、省部级重点研发项目，致力于产出具有国际影响力的原创成果，并推动产学研医深度协同。
-        </p>
+      <!-- Intro paragraph -->
+      <p class="max-w-4xl text-slate-700 leading-relaxed text-base md:text-lg reveal" data-i18n="about.body">
+        贵州医科大学骨科医工融合与临床转化重点实验室 …
+      </p>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 reveal">
-          <div class="p-5 rounded-xl border border-slate-200 hover:border-brand-600 transition">
-            <div class="w-10 h-10 rounded-lg bg-brand-50 text-brand-600 flex items-center justify-center mb-3">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+      <!-- 三大研究方向 -->
+      <div class="mt-14 reveal">
+        <div class="text-xs font-semibold uppercase tracking-wider text-accent-500 mb-1" data-i18n="about.dir.eyebrow">研究方向</div>
+        <h3 class="font-serif text-2xl font-bold text-brand-800 mb-6" data-i18n="about.dir.title">三大研究方向</h3>
+
+        <div class="grid md:grid-cols-3 gap-5">
+          <div class="p-6 rounded-xl border border-slate-200 hover:border-brand-600 hover:shadow-md transition bg-white">
+            <div class="w-11 h-11 rounded-lg bg-brand-50 text-brand-600 flex items-center justify-center mb-4">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12h8M12 8v8"/></svg>
             </div>
-            <div class="font-semibold text-slate-900" data-i18n="about.r1.t">骨损伤与修复</div>
-            <div class="text-sm text-slate-600 mt-1" data-i18n="about.r1.d">骨折愈合、骨缺损修复、骨再生新材料</div>
+            <div class="font-semibold text-slate-900 text-lg" data-i18n="about.r1.t">骨科创新医疗器械</div>
+            <div class="text-sm text-slate-600 mt-2 leading-relaxed" data-i18n="about.r1.d">器械研发与备案</div>
           </div>
-          <div class="p-5 rounded-xl border border-slate-200 hover:border-brand-600 transition">
-            <div class="w-10 h-10 rounded-lg bg-brand-50 text-brand-600 flex items-center justify-center mb-3">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg>
+          <div class="p-6 rounded-xl border border-slate-200 hover:border-brand-600 hover:shadow-md transition bg-white">
+            <div class="w-11 h-11 rounded-lg bg-brand-50 text-brand-600 flex items-center justify-center mb-4">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
             </div>
-            <div class="font-semibold text-slate-900" data-i18n="about.r2.t">骨代谢疾病</div>
-            <div class="text-sm text-slate-600 mt-1" data-i18n="about.r2.d">骨质疏松、关节炎及衰老相关骨病机制</div>
+            <div class="font-semibold text-slate-900 text-lg" data-i18n="about.r2.t">3D 打印 + 静电纺丝生物制造</div>
+            <div class="text-sm text-slate-600 mt-2 leading-relaxed" data-i18n="about.r2.d">生物制造</div>
           </div>
-          <div class="p-5 rounded-xl border border-slate-200 hover:border-brand-600 transition">
-            <div class="w-10 h-10 rounded-lg bg-brand-50 text-brand-600 flex items-center justify-center mb-3">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12h8M12 8v8"/></svg>
+          <div class="p-6 rounded-xl border border-slate-200 hover:border-brand-600 hover:shadow-md transition bg-white">
+            <div class="w-11 h-11 rounded-lg bg-brand-50 text-brand-600 flex items-center justify-center mb-4">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg>
             </div>
-            <div class="font-semibold text-slate-900" data-i18n="about.r3.t">骨科生物材料</div>
-            <div class="text-sm text-slate-600 mt-1" data-i18n="about.r3.d">3D 打印支架、智能水凝胶、可降解金属</div>
-          </div>
-          <div class="p-5 rounded-xl border border-slate-200 hover:border-brand-600 transition">
-            <div class="w-10 h-10 rounded-lg bg-brand-50 text-brand-600 flex items-center justify-center mb-3">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12c2-4 6-7 10-7s8 3 10 7c-2 4-6 7-10 7S4 16 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
-            </div>
-            <div class="font-semibold text-slate-900" data-i18n="about.r4.t">智能医疗器械</div>
-            <div class="text-sm text-slate-600 mt-1" data-i18n="about.r4.d">手术机器人、AI 影像辅助、可穿戴监测</div>
+            <div class="font-semibold text-slate-900 text-lg" data-i18n="about.r3.t">骨与软骨临床转化</div>
+            <div class="text-sm text-slate-600 mt-2 leading-relaxed" data-i18n="about.r3.d">临床转化</div>
           </div>
         </div>
+      </div>
+
+      <!-- 6 KPI 数字卡 -->
+      <div class="mt-14 reveal">
+        <h3 class="font-serif text-2xl font-bold text-brand-800 mb-6" data-i18n="about.kpi.title">建设期主要成果</h3>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div class="kpi-card rounded-xl p-5 text-center">
+            <div class="text-2xl md:text-3xl font-bold text-brand-700" data-i18n="about.kpi.k1.n">5+4</div>
+            <div class="text-xs text-slate-600 mt-2 leading-snug" data-i18n="about.kpi.k1.t">授权发明专利 / 实审中</div>
+          </div>
+          <div class="kpi-card rounded-xl p-5 text-center">
+            <div class="text-2xl md:text-3xl font-bold text-brand-700" data-i18n="about.kpi.k2.n">6</div>
+            <div class="text-xs text-slate-600 mt-2 leading-snug" data-i18n="about.kpi.k2.t">一类医疗器械备案证</div>
+          </div>
+          <div class="kpi-card rounded-xl p-5 text-center">
+            <div class="text-2xl md:text-3xl font-bold text-brand-700" data-i18n="about.kpi.k3.n">26</div>
+            <div class="text-xs text-slate-600 mt-2 leading-snug" data-i18n="about.kpi.k3.t">SCI 论文（最高 IF 15.3）</div>
+          </div>
+          <div class="kpi-card rounded-xl p-5 text-center">
+            <div class="text-2xl md:text-3xl font-bold text-brand-700" data-i18n="about.kpi.k4.n">10+</div>
+            <div class="text-xs text-slate-600 mt-2 leading-snug" data-i18n="about.kpi.k4.t">创新创业奖项</div>
+          </div>
+          <div class="kpi-card rounded-xl p-5 text-center">
+            <div class="text-2xl md:text-3xl font-bold text-brand-700" data-i18n="about.kpi.k5.n">8+2</div>
+            <div class="text-xs text-slate-600 mt-2 leading-snug" data-i18n="about.kpi.k5.t">国自然 / 省级重大项目</div>
+          </div>
+          <div class="kpi-card rounded-xl p-5 text-center">
+            <div class="text-2xl md:text-3xl font-bold text-brand-700" data-i18n="about.kpi.k6.n">18+12</div>
+            <div class="text-xs text-slate-600 mt-2 leading-snug" data-i18n="about.kpi.k6.t">在读研究生 / 已毕业</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 设备段落 -->
+      <div class="mt-14 reveal grid md:grid-cols-[200px_1fr] gap-6 items-start p-6 md:p-8 rounded-2xl bg-slate-50 border border-slate-200">
+        <div>
+          <div class="w-14 h-14 rounded-xl bg-brand-600 text-white flex items-center justify-center">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7l9-4 9 4M3 7v10l9 4 9-4V7M3 7l9 4 9-4M12 11v10"/></svg>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-brand-800 mt-3" data-i18n="about.eq.title">实验平台与设备</h3>
+        </div>
+        <p class="text-slate-700 leading-relaxed text-base" data-i18n="about.eq.body">
+          1000 m² 共享平台 …
+        </p>
       </div>
     </div>
   </section>
@@ -305,113 +373,382 @@
         <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-800 section-title" data-i18n="members.title">研究团队</h2>
       </div>
 
-      <!-- PI Card (highlighted) -->
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="member-card md:col-span-3 bg-white rounded-2xl border border-slate-200 p-6 md:p-8 grid md:grid-cols-[160px_1fr] gap-6 items-center reveal">
-          <div class="w-32 h-32 md:w-40 md:h-40 rounded-2xl avatar-fallback flex items-center justify-center text-4xl">
-            PI
-          </div>
-          <div>
-            <div class="text-xs font-semibold uppercase tracking-wider text-accent-500" data-i18n="members.pi.role">实验室负责人 · Principal Investigator</div>
-            <h3 class="font-serif text-2xl md:text-3xl font-bold text-brand-800 mt-1" data-i18n="members.pi.name">[ 待填写 PI 姓名 ]</h3>
-            <div class="text-slate-600 mt-1" data-i18n="members.pi.title">教授 · 博士生导师 · 骨科主任医师</div>
-            <p class="text-slate-700 mt-3 text-sm leading-relaxed" data-i18n="members.pi.bio">
-              贵州医科大学附属医院骨科教授、博士生导师，长期从事骨损伤修复与骨科生物材料研究。
-              主持国家自然科学基金面上/重点项目多项，发表 SCI 论文 60 余篇，授权发明专利 10 余项。
-              （在 index.html 的 i18n 数据中替换为真实简介）
-            </p>
-            <div class="flex flex-wrap gap-2 mt-4 text-xs">
-              <span class="px-2.5 py-1 rounded-full bg-brand-50 text-brand-700">骨损伤修复</span>
-              <span class="px-2.5 py-1 rounded-full bg-brand-50 text-brand-700">生物材料</span>
-              <span class="px-2.5 py-1 rounded-full bg-brand-50 text-brand-700">3D 打印</span>
-            </div>
-          </div>
+      <!-- PI Card (大卡 + 学术任职 list) -->
+      <div class="member-card bg-white rounded-2xl border border-slate-200 p-6 md:p-8 grid md:grid-cols-[180px_1fr] gap-6 reveal">
+        <div class="flex flex-col items-center md:items-start">
+          <div class="w-32 h-32 md:w-40 md:h-40 rounded-2xl avatar-fallback flex items-center justify-center text-4xl">叶</div>
         </div>
+        <div>
+          <div class="text-xs font-semibold uppercase tracking-wider text-accent-500" data-i18n="members.pi.role">实验室执行主任 · Principal Investigator</div>
+          <h3 class="font-serif text-2xl md:text-3xl font-bold text-brand-800 mt-1" data-i18n="members.pi.name">叶川 教授</h3>
+          <div class="text-slate-600 mt-1" data-i18n="members.pi.title">主任医师 · 博士 · 博士生导师</div>
+          <p class="text-slate-700 mt-3 text-sm leading-relaxed" data-i18n="members.pi.bio">PI 简介。</p>
 
-        <!-- Faculty / Co-PI cards -->
-        <div class="member-card bg-white rounded-2xl border border-slate-200 p-6 reveal" data-member-card>
-          <div class="w-20 h-20 rounded-xl avatar-fallback flex items-center justify-center text-xl mb-4" data-initials>F1</div>
-          <h4 class="font-semibold text-slate-900" data-i18n="members.f1.name">[ 副教授 / 副主任医师姓名 ]</h4>
-          <div class="text-xs text-slate-500 mt-0.5" data-i18n="members.f1.title">副教授 · 副主任医师</div>
-          <p class="text-sm text-slate-600 mt-3 leading-relaxed" data-i18n="members.f1.bio">研究方向：骨代谢疾病机制与转化医学</p>
-        </div>
-        <div class="member-card bg-white rounded-2xl border border-slate-200 p-6 reveal" data-member-card>
-          <div class="w-20 h-20 rounded-xl avatar-fallback flex items-center justify-center text-xl mb-4" data-initials>F2</div>
-          <h4 class="font-semibold text-slate-900" data-i18n="members.f2.name">[ 副研究员姓名 ]</h4>
-          <div class="text-xs text-slate-500 mt-0.5" data-i18n="members.f2.title">副研究员 · 硕士生导师</div>
-          <p class="text-sm text-slate-600 mt-3 leading-relaxed" data-i18n="members.f2.bio">研究方向：智能水凝胶与组织工程支架</p>
-        </div>
-        <div class="member-card bg-white rounded-2xl border border-slate-200 p-6 reveal" data-member-card>
-          <div class="w-20 h-20 rounded-xl avatar-fallback flex items-center justify-center text-xl mb-4" data-initials>F3</div>
-          <h4 class="font-semibold text-slate-900" data-i18n="members.f3.name">[ 讲师姓名 ]</h4>
-          <div class="text-xs text-slate-500 mt-0.5" data-i18n="members.f3.title">讲师 · 博士</div>
-          <p class="text-sm text-slate-600 mt-3 leading-relaxed" data-i18n="members.f3.bio">研究方向：骨科 AI 影像与计算生物力学</p>
+          <!-- tags -->
+          <div class="flex flex-wrap gap-2 mt-4 text-xs">
+            <span class="px-2.5 py-1 rounded-full bg-brand-50 text-brand-700" data-i18n="members.pi.tag1">骨科生物材料</span>
+            <span class="px-2.5 py-1 rounded-full bg-brand-50 text-brand-700" data-i18n="members.pi.tag2">3D 打印 / 静电纺丝</span>
+            <span class="px-2.5 py-1 rounded-full bg-brand-50 text-brand-700" data-i18n="members.pi.tag3">保膝新术式</span>
+            <span class="px-2.5 py-1 rounded-full bg-brand-50 text-brand-700" data-i18n="members.pi.tag4">组织工程</span>
+          </div>
+
+          <!-- 学术任职 -->
+          <div class="mt-5 pt-5 border-t border-slate-100">
+            <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-3" data-i18n="members.pi.aff.t">主要学术任职</div>
+            <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-1.5 text-sm text-slate-700 list-disc list-inside marker:text-accent-500">
+              <li data-i18n="members.pi.aff.l1">国家卫健委地方性骨关节病治疗专家组成员</li>
+              <li data-i18n="members.pi.aff.l2">中国研究型医院学会关节外科分会委员</li>
+              <li data-i18n="members.pi.aff.l3">中华医学会数字医学分会委员</li>
+              <li data-i18n="members.pi.aff.l4">中国医师协会骨科医师分会再生医学学组委员</li>
+              <li data-i18n="members.pi.aff.l5">中国生物医学工程学会干细胞技术分会常委</li>
+              <li data-i18n="members.pi.aff.l6">SICOT 中国部数字骨科学会委员</li>
+              <li class="sm:col-span-2" data-i18n="members.pi.aff.l7">贵州省康复医学会创伤与修复委员会副主任委员</li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <!-- Students -->
-      <h3 class="mt-12 mb-4 font-semibold text-brand-800" data-i18n="members.studentsHeading">研究生与本科生 · Graduate & Undergraduate Students</h3>
-      <div class="flex flex-wrap gap-2 reveal">
-        <span class="px-3 py-1.5 rounded-full bg-white border border-slate-200 text-sm text-slate-700" data-i18n="members.s1">[ 博士生 张三 ]</span>
-        <span class="px-3 py-1.5 rounded-full bg-white border border-slate-200 text-sm text-slate-700" data-i18n="members.s2">[ 博士生 李四 ]</span>
-        <span class="px-3 py-1.5 rounded-full bg-white border border-slate-200 text-sm text-slate-700" data-i18n="members.s3">[ 硕士生 王五 ]</span>
-        <span class="px-3 py-1.5 rounded-full bg-white border border-slate-200 text-sm text-slate-700" data-i18n="members.s4">[ 硕士生 赵六 ]</span>
-        <span class="px-3 py-1.5 rounded-full bg-white border border-slate-200 text-sm text-slate-700" data-i18n="members.s5">[ 硕士生 钱七 ]</span>
-        <span class="px-3 py-1.5 rounded-full bg-white border border-slate-200 text-sm text-slate-700" data-i18n="members.s6">[ 本科科研助理 孙八 ]</span>
+      <!-- 学术带头人 (4 位) -->
+      <h3 class="mt-14 mb-5 font-serif text-2xl font-bold text-brand-800" data-i18n="members.lead.title">学术带头人</h3>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div class="member-card bg-white rounded-2xl border border-slate-200 p-6 reveal">
+          <div class="w-16 h-16 rounded-xl avatar-fallback flex items-center justify-center text-lg mb-4">彭</div>
+          <h4 class="font-semibold text-slate-900" data-i18n="members.f1.name">彭吾训 教授</h4>
+          <div class="text-xs text-slate-500 mt-0.5" data-i18n="members.f1.title">主任医师 · 博士</div>
+          <p class="text-sm text-slate-600 mt-3 leading-relaxed" data-i18n="members.f1.bio">研究方向</p>
+        </div>
+        <div class="member-card bg-white rounded-2xl border border-slate-200 p-6 reveal">
+          <div class="w-16 h-16 rounded-xl avatar-fallback flex items-center justify-center text-lg mb-4">邓</div>
+          <h4 class="font-semibold text-slate-900" data-i18n="members.f2.name">邓进 教授</h4>
+          <div class="text-xs text-slate-500 mt-0.5" data-i18n="members.f2.title">主任医师</div>
+          <p class="text-sm text-slate-600 mt-3 leading-relaxed" data-i18n="members.f2.bio">研究方向</p>
+        </div>
+        <div class="member-card bg-white rounded-2xl border border-slate-200 p-6 reveal">
+          <div class="w-16 h-16 rounded-xl avatar-fallback flex items-center justify-center text-lg mb-4">宁</div>
+          <h4 class="font-semibold text-slate-900" data-i18n="members.f3.name">宁旭 教授</h4>
+          <div class="text-xs text-slate-500 mt-0.5" data-i18n="members.f3.title">主任医师 · 博士</div>
+          <p class="text-sm text-slate-600 mt-3 leading-relaxed" data-i18n="members.f3.bio">研究方向</p>
+        </div>
+        <div class="member-card bg-white rounded-2xl border border-slate-200 p-6 reveal">
+          <div class="w-16 h-16 rounded-xl avatar-fallback flex items-center justify-center text-lg mb-4">汪</div>
+          <h4 class="font-semibold text-slate-900" data-i18n="members.f4.name">汪健 副教授</h4>
+          <div class="text-xs text-slate-500 mt-0.5" data-i18n="members.f4.title">副主任医师 · 博士</div>
+          <p class="text-sm text-slate-600 mt-3 leading-relaxed" data-i18n="members.f4.bio">研究方向</p>
+        </div>
+      </div>
+
+      <!-- 青年研究骨干 (9 位 紧凑卡) -->
+      <div class="mt-14 reveal">
+        <h3 class="font-serif text-2xl font-bold text-brand-800" data-i18n="members.youth.title">青年研究骨干</h3>
+        <div class="text-sm text-slate-500 mt-1" data-i18n="members.youth.subtitle">海外深造背景</div>
+      </div>
+      <div class="mt-5 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="member-card bg-white rounded-xl border border-slate-200 p-5 reveal">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-lg avatar-fallback flex items-center justify-center text-sm shrink-0">杨</div>
+            <div>
+              <h4 class="font-semibold text-slate-900" data-i18n="members.y1.name">杨龙</h4>
+              <div class="text-xs text-slate-500 mt-0.5" data-i18n="members.y1.title">主治医师 · 博士</div>
+            </div>
+          </div>
+          <p class="text-xs text-slate-600 mt-3 leading-relaxed" data-i18n="members.y1.tag">NUS 博后</p>
+        </div>
+        <div class="member-card bg-white rounded-xl border border-slate-200 p-5 reveal">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-lg avatar-fallback flex items-center justify-center text-sm shrink-0">张</div>
+            <div>
+              <h4 class="font-semibold text-slate-900" data-i18n="members.y2.name">张飞</h4>
+              <div class="text-xs text-slate-500 mt-0.5" data-i18n="members.y2.title">主治医师 · 博士</div>
+            </div>
+          </div>
+          <p class="text-xs text-slate-600 mt-3 leading-relaxed" data-i18n="members.y2.tag">布朗博后</p>
+        </div>
+        <div class="member-card bg-white rounded-xl border border-slate-200 p-5 reveal">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-lg avatar-fallback flex items-center justify-center text-sm shrink-0">许</div>
+            <div>
+              <h4 class="font-semibold text-slate-900" data-i18n="members.y3.name">许顺恩</h4>
+              <div class="text-xs text-slate-500 mt-0.5" data-i18n="members.y3.title">副主任医师 · 博士在读</div>
+            </div>
+          </div>
+          <p class="text-xs text-slate-600 mt-3 leading-relaxed" data-i18n="members.y3.tag">梅奥访学</p>
+        </div>
+        <div class="member-card bg-white rounded-xl border border-slate-200 p-5 reveal">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-lg avatar-fallback flex items-center justify-center text-sm shrink-0">袁</div>
+            <div>
+              <h4 class="font-semibold text-slate-900" data-i18n="members.y4.name">袁代柱</h4>
+              <div class="text-xs text-slate-500 mt-0.5" data-i18n="members.y4.title">主治医师 · 博士在读</div>
+            </div>
+          </div>
+          <p class="text-xs text-slate-600 mt-3 leading-relaxed" data-i18n="members.y4.tag">器械发明人</p>
+        </div>
+        <div class="member-card bg-white rounded-xl border border-slate-200 p-5 reveal">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-lg avatar-fallback flex items-center justify-center text-sm shrink-0">沈</div>
+            <div>
+              <h4 class="font-semibold text-slate-900" data-i18n="members.y5.name">沈茂</h4>
+              <div class="text-xs text-slate-500 mt-0.5" data-i18n="members.y5.title">副主任医师 · 博士在读</div>
+            </div>
+          </div>
+          <p class="text-xs text-slate-600 mt-3 leading-relaxed" data-i18n="members.y5.tag">国自然 PI</p>
+        </div>
+        <div class="member-card bg-white rounded-xl border border-slate-200 p-5 reveal">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-lg avatar-fallback flex items-center justify-center text-sm shrink-0">王</div>
+            <div>
+              <h4 class="font-semibold text-slate-900" data-i18n="members.y6.name">王洪</h4>
+              <div class="text-xs text-slate-500 mt-0.5" data-i18n="members.y6.title">主治医师 · 博士</div>
+            </div>
+          </div>
+          <p class="text-xs text-slate-600 mt-3 leading-relaxed" data-i18n="members.y6.tag">创伤生物力学</p>
+        </div>
+        <div class="member-card bg-white rounded-xl border border-slate-200 p-5 reveal">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-lg avatar-fallback flex items-center justify-center text-sm shrink-0">吴</div>
+            <div>
+              <h4 class="font-semibold text-slate-900" data-i18n="members.y7.name">吴展羽</h4>
+              <div class="text-xs text-slate-500 mt-0.5" data-i18n="members.y7.title">主治医师 · 博士在读</div>
+            </div>
+          </div>
+          <p class="text-xs text-slate-600 mt-3 leading-relaxed" data-i18n="members.y7.tag">骨科创伤修复</p>
+        </div>
+        <div class="member-card bg-white rounded-xl border border-slate-200 p-5 reveal">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-lg avatar-fallback flex items-center justify-center text-sm shrink-0">邹</div>
+            <div>
+              <h4 class="font-semibold text-slate-900" data-i18n="members.y8.name">邹强</h4>
+              <div class="text-xs text-slate-500 mt-0.5" data-i18n="members.y8.title">主治医师 · 硕士</div>
+            </div>
+          </div>
+          <p class="text-xs text-slate-600 mt-3 leading-relaxed" data-i18n="members.y8.tag">骨科器械研发</p>
+        </div>
+        <div class="member-card bg-white rounded-xl border border-slate-200 p-5 reveal">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-lg avatar-fallback flex items-center justify-center text-sm shrink-0">孙</div>
+            <div>
+              <h4 class="font-semibold text-slate-900" data-i18n="members.y9.name">孙红</h4>
+              <div class="text-xs text-slate-500 mt-0.5" data-i18n="members.y9.title">主治医师 · 博士在读</div>
+            </div>
+          </div>
+          <p class="text-xs text-slate-600 mt-3 leading-relaxed" data-i18n="members.y9.tag">骨与软骨损伤修复</p>
+        </div>
+      </div>
+
+      <!-- 研究生培养段落 -->
+      <div class="mt-12 p-6 md:p-8 rounded-2xl bg-white border border-slate-200 reveal">
+        <h3 class="font-serif text-xl font-bold text-brand-800" data-i18n="members.students.title">研究生培养</h3>
+        <p class="mt-3 text-slate-700 leading-relaxed" data-i18n="members.students.body">学生培养概览</p>
       </div>
     </div>
   </section>
 
-  <!-- ============== PUBLICATIONS ============== -->
+  <!-- ============== PUBLICATIONS / OUTPUTS ============== -->
   <section id="publications" class="py-20">
     <div class="container-x">
       <div class="max-w-2xl mb-10 reveal">
-        <div class="text-xs font-semibold uppercase tracking-wider text-accent-500 mb-2" data-i18n="pubs.eyebrow">代表性论文</div>
-        <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-800 section-title" data-i18n="pubs.title">Recent Publications</h2>
+        <div class="text-xs font-semibold uppercase tracking-wider text-accent-500 mb-2" data-i18n="pubs.eyebrow">科研产出</div>
+        <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-800 section-title" data-i18n="pubs.title">论文 · 专利 · 器械 · 课题</h2>
       </div>
 
-      <div class="space-y-4">
-        <article class="pub-item bg-white p-5 pl-6 rounded-r-lg reveal">
-          <div class="text-xs text-slate-500">2025 · <span class="font-semibold text-accent-500">Advanced Materials</span></div>
-          <h4 class="mt-1 font-semibold text-slate-900" data-i18n="pubs.p1.title">[ 论文标题占位 — A bioactive 3D-printed scaffold for critical-sized bone defect regeneration ]</h4>
-          <div class="text-sm text-slate-600 mt-1" data-i18n="pubs.p1.authors">Zhang X, Li Y, <strong>Corresponding Author</strong>, et al.</div>
-          <div class="text-xs text-slate-500 mt-2">DOI: 10.xxxx/xxxxxx · IF 32.0</div>
-        </article>
-
-        <article class="pub-item bg-white p-5 pl-6 rounded-r-lg reveal">
-          <div class="text-xs text-slate-500">2024 · <span class="font-semibold text-accent-500">Bioactive Materials</span></div>
-          <h4 class="mt-1 font-semibold text-slate-900" data-i18n="pubs.p2.title">[ 论文标题占位 — Smart hydrogel modulates osteoimmune microenvironment for bone regeneration ]</h4>
-          <div class="text-sm text-slate-600 mt-1" data-i18n="pubs.p2.authors">Wang M, Liu R, <strong>Corresponding Author</strong>, et al.</div>
-          <div class="text-xs text-slate-500 mt-2">DOI: 10.xxxx/xxxxxx · IF 18.9</div>
-        </article>
-
-        <article class="pub-item bg-white p-5 pl-6 rounded-r-lg reveal">
-          <div class="text-xs text-slate-500">2024 · <span class="font-semibold text-accent-500">Bone Research</span></div>
-          <h4 class="mt-1 font-semibold text-slate-900" data-i18n="pubs.p3.title">[ 论文标题占位 — Mechanotransduction signaling in osteoporotic bone remodeling ]</h4>
-          <div class="text-sm text-slate-600 mt-1" data-i18n="pubs.p3.authors">Chen J, Zhao Q, <strong>Corresponding Author</strong>, et al.</div>
-          <div class="text-xs text-slate-500 mt-2">DOI: 10.xxxx/xxxxxx · IF 13.3</div>
-        </article>
-
-        <article class="pub-item bg-white p-5 pl-6 rounded-r-lg reveal">
-          <div class="text-xs text-slate-500">2023 · <span class="font-semibold text-accent-500">Acta Biomaterialia</span></div>
-          <h4 class="mt-1 font-semibold text-slate-900" data-i18n="pubs.p4.title">[ 论文标题占位 — Magnesium-based biodegradable implant for accelerated fracture healing ]</h4>
-          <div class="text-sm text-slate-600 mt-1" data-i18n="pubs.p4.authors">Sun K, Zhou H, <strong>Corresponding Author</strong>, et al.</div>
-          <div class="text-xs text-slate-500 mt-2">DOI: 10.xxxx/xxxxxx · IF 9.4</div>
-        </article>
-
-        <article class="pub-item bg-white p-5 pl-6 rounded-r-lg reveal">
-          <div class="text-xs text-slate-500">2023 · <span class="font-semibold text-accent-500">Journal of Orthopaedic Translation</span></div>
-          <h4 class="mt-1 font-semibold text-slate-900" data-i18n="pubs.p5.title">[ 论文标题占位 — AI-assisted diagnosis pipeline for vertebral compression fracture screening ]</h4>
-          <div class="text-sm text-slate-600 mt-1" data-i18n="pubs.p5.authors">Yang T, Wu P, <strong>Corresponding Author</strong>, et al.</div>
-          <div class="text-xs text-slate-500 mt-2">DOI: 10.xxxx/xxxxxx · IF 6.0</div>
-        </article>
+      <!-- Tab buttons -->
+      <div class="flex flex-wrap gap-2 mb-8 reveal" id="pub-tabs">
+        <button class="tab-btn active" data-tab="papers"   data-i18n="pubs.tab.papers">代表论文</button>
+        <button class="tab-btn"        data-tab="patents"  data-i18n="pubs.tab.patents">授权专利</button>
+        <button class="tab-btn"        data-tab="devices"  data-i18n="pubs.tab.devices">医疗器械</button>
+        <button class="tab-btn"        data-tab="projects" data-i18n="pubs.tab.projects">在研课题</button>
       </div>
 
-      <div class="mt-8 reveal">
-        <a href="https://scholar.google.com/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-brand-600 font-medium hover:underline">
-          <span data-i18n="pubs.more">完整发表列表（Google Scholar）</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 7h10v10M7 17L17 7"/></svg>
-        </a>
+      <!-- Papers (10) -->
+      <div class="tab-panel active" data-panel="papers">
+        <div class="space-y-3">
+          <article class="pub-item bg-white p-5 pl-6 rounded-r-lg">
+            <div class="text-xs text-slate-500">
+              <span data-i18n="pubs.p1.year">2023</span> · <span class="font-semibold text-accent-500" data-i18n="pubs.p1.journal">Chemical Engineering Journal</span> · <span class="font-semibold text-brand-700" data-i18n="pubs.p1.if">IF 15.3</span>
+            </div>
+            <h4 class="mt-1 font-semibold text-slate-900" data-i18n="pubs.p1.title">论文标题</h4>
+            <div class="text-sm text-slate-600 mt-1" data-i18n="pubs.p1.authors">作者</div>
+          </article>
+          <article class="pub-item bg-white p-5 pl-6 rounded-r-lg">
+            <div class="text-xs text-slate-500"><span data-i18n="pubs.p2.year">2023</span> · <span class="font-semibold text-accent-500" data-i18n="pubs.p2.journal">Cell Communication and Signaling</span></div>
+            <h4 class="mt-1 font-semibold text-slate-900" data-i18n="pubs.p2.title">论文标题</h4>
+            <div class="text-sm text-slate-600 mt-1" data-i18n="pubs.p2.authors">作者</div>
+          </article>
+          <article class="pub-item bg-white p-5 pl-6 rounded-r-lg">
+            <div class="text-xs text-slate-500"><span data-i18n="pubs.p3.year">2022</span> · <span class="font-semibold text-accent-500" data-i18n="pubs.p3.journal">Materials &amp; Design</span></div>
+            <h4 class="mt-1 font-semibold text-slate-900" data-i18n="pubs.p3.title">论文标题</h4>
+            <div class="text-sm text-slate-600 mt-1" data-i18n="pubs.p3.authors">作者</div>
+          </article>
+          <article class="pub-item bg-white p-5 pl-6 rounded-r-lg">
+            <div class="text-xs text-slate-500"><span data-i18n="pubs.p4.year">2023</span> · <span class="font-semibold text-accent-500" data-i18n="pubs.p4.journal">Bone Research / Biomaterials</span></div>
+            <h4 class="mt-1 font-semibold text-slate-900" data-i18n="pubs.p4.title">论文标题</h4>
+            <div class="text-sm text-slate-600 mt-1" data-i18n="pubs.p4.authors">作者</div>
+          </article>
+          <article class="pub-item bg-white p-5 pl-6 rounded-r-lg">
+            <div class="text-xs text-slate-500"><span data-i18n="pubs.p5.year">2023</span> · <span class="font-semibold text-accent-500" data-i18n="pubs.p5.journal">J. Orthop. Res.</span></div>
+            <h4 class="mt-1 font-semibold text-slate-900" data-i18n="pubs.p5.title">论文标题</h4>
+            <div class="text-sm text-slate-600 mt-1" data-i18n="pubs.p5.authors">作者</div>
+          </article>
+          <article class="pub-item bg-white p-5 pl-6 rounded-r-lg">
+            <div class="text-xs text-slate-500"><span data-i18n="pubs.p6.year">2022</span> · <span class="font-semibold text-accent-500" data-i18n="pubs.p6.journal">Biomaterials Research</span></div>
+            <h4 class="mt-1 font-semibold text-slate-900" data-i18n="pubs.p6.title">论文标题</h4>
+            <div class="text-sm text-slate-600 mt-1" data-i18n="pubs.p6.authors">作者</div>
+          </article>
+          <article class="pub-item bg-white p-5 pl-6 rounded-r-lg">
+            <div class="text-xs text-slate-500"><span data-i18n="pubs.p7.year">2022</span> · <span class="font-semibold text-accent-500" data-i18n="pubs.p7.journal">Comp. Methods in Biomechanics</span></div>
+            <h4 class="mt-1 font-semibold text-slate-900" data-i18n="pubs.p7.title">论文标题</h4>
+            <div class="text-sm text-slate-600 mt-1" data-i18n="pubs.p7.authors">作者</div>
+          </article>
+          <article class="pub-item bg-white p-5 pl-6 rounded-r-lg">
+            <div class="text-xs text-slate-500"><span data-i18n="pubs.p8.year">2022</span> · <span class="font-semibold text-accent-500" data-i18n="pubs.p8.journal">Knee Surgery / Knee</span></div>
+            <h4 class="mt-1 font-semibold text-slate-900" data-i18n="pubs.p8.title">论文标题</h4>
+            <div class="text-sm text-slate-600 mt-1" data-i18n="pubs.p8.authors">作者</div>
+          </article>
+          <article class="pub-item bg-white p-5 pl-6 rounded-r-lg">
+            <div class="text-xs text-slate-500"><span data-i18n="pubs.p9.year">2021</span> · <span class="font-semibold text-accent-500" data-i18n="pubs.p9.journal">Biofabrication</span></div>
+            <h4 class="mt-1 font-semibold text-slate-900" data-i18n="pubs.p9.title">论文标题</h4>
+            <div class="text-sm text-slate-600 mt-1" data-i18n="pubs.p9.authors">作者</div>
+          </article>
+          <article class="pub-item bg-white p-5 pl-6 rounded-r-lg">
+            <div class="text-xs text-slate-500"><span data-i18n="pubs.p10.year">2021</span> · <span class="font-semibold text-accent-500" data-i18n="pubs.p10.journal">Mol. Cell. Endocrinol.</span></div>
+            <h4 class="mt-1 font-semibold text-slate-900" data-i18n="pubs.p10.title">论文标题</h4>
+            <div class="text-sm text-slate-600 mt-1" data-i18n="pubs.p10.authors">作者</div>
+          </article>
+        </div>
+        <div class="mt-6 text-sm text-slate-500" data-i18n="pubs.more">完整论文列表请联系实验室获取</div>
+      </div>
+
+      <!-- Patents (6) -->
+      <div class="tab-panel" data-panel="patents">
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="p-5 rounded-lg border border-slate-200 bg-white hover:border-brand-600 transition">
+            <h4 class="font-semibold text-slate-900 leading-snug" data-i18n="pubs.pat1.title">专利标题</h4>
+            <div class="text-xs text-slate-500 mt-2" data-i18n="pubs.pat1.no">专利号</div>
+            <div class="text-xs text-slate-600 mt-1" data-i18n="pubs.pat1.inv">发明人</div>
+          </div>
+          <div class="p-5 rounded-lg border border-slate-200 bg-white hover:border-brand-600 transition">
+            <h4 class="font-semibold text-slate-900 leading-snug" data-i18n="pubs.pat2.title">专利标题</h4>
+            <div class="text-xs text-slate-500 mt-2" data-i18n="pubs.pat2.no">专利号</div>
+            <div class="text-xs text-slate-600 mt-1" data-i18n="pubs.pat2.inv">发明人</div>
+          </div>
+          <div class="p-5 rounded-lg border border-slate-200 bg-white hover:border-brand-600 transition">
+            <h4 class="font-semibold text-slate-900 leading-snug" data-i18n="pubs.pat3.title">专利标题</h4>
+            <div class="text-xs text-slate-500 mt-2" data-i18n="pubs.pat3.no">专利号</div>
+            <div class="text-xs text-slate-600 mt-1" data-i18n="pubs.pat3.inv">发明人</div>
+          </div>
+          <div class="p-5 rounded-lg border border-slate-200 bg-white hover:border-brand-600 transition">
+            <h4 class="font-semibold text-slate-900 leading-snug" data-i18n="pubs.pat4.title">专利标题</h4>
+            <div class="text-xs text-slate-500 mt-2" data-i18n="pubs.pat4.no">专利号</div>
+            <div class="text-xs text-slate-600 mt-1" data-i18n="pubs.pat4.inv">发明人</div>
+          </div>
+          <div class="p-5 rounded-lg border border-slate-200 bg-white hover:border-brand-600 transition">
+            <h4 class="font-semibold text-slate-900 leading-snug" data-i18n="pubs.pat5.title">专利标题</h4>
+            <div class="text-xs text-slate-500 mt-2" data-i18n="pubs.pat5.no">专利号</div>
+            <div class="text-xs text-slate-600 mt-1" data-i18n="pubs.pat5.inv">发明人</div>
+          </div>
+          <div class="p-5 rounded-lg border border-slate-200 bg-white hover:border-brand-600 transition">
+            <h4 class="font-semibold text-slate-900 leading-snug" data-i18n="pubs.pat6.title">专利标题</h4>
+            <div class="text-xs text-slate-500 mt-2" data-i18n="pubs.pat6.no">专利号</div>
+            <div class="text-xs text-slate-600 mt-1" data-i18n="pubs.pat6.inv">发明人</div>
+          </div>
+        </div>
+        <div class="mt-6 text-sm text-slate-500" data-i18n="pubs.pat.more">另有专利在审</div>
+      </div>
+
+      <!-- Devices (6) -->
+      <div class="tab-panel" data-panel="devices">
+        <div class="text-sm text-slate-600 mb-5" data-i18n="pubs.dev.subtitle">已临床免费使用</div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div class="p-5 rounded-lg border border-slate-200 bg-white hover:border-brand-600 transition flex items-start gap-4">
+            <div class="w-10 h-10 rounded-md bg-brand-50 text-brand-600 flex items-center justify-center shrink-0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+            <div>
+              <h4 class="font-semibold text-slate-900" data-i18n="pubs.dev1.name">器械名</h4>
+              <div class="text-xs text-slate-500 mt-1" data-i18n="pubs.dev1.no">备案号</div>
+            </div>
+          </div>
+          <div class="p-5 rounded-lg border border-slate-200 bg-white hover:border-brand-600 transition flex items-start gap-4">
+            <div class="w-10 h-10 rounded-md bg-brand-50 text-brand-600 flex items-center justify-center shrink-0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+            <div>
+              <h4 class="font-semibold text-slate-900" data-i18n="pubs.dev2.name">器械名</h4>
+              <div class="text-xs text-slate-500 mt-1" data-i18n="pubs.dev2.no">备案号</div>
+            </div>
+          </div>
+          <div class="p-5 rounded-lg border border-slate-200 bg-white hover:border-brand-600 transition flex items-start gap-4">
+            <div class="w-10 h-10 rounded-md bg-brand-50 text-brand-600 flex items-center justify-center shrink-0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+            <div>
+              <h4 class="font-semibold text-slate-900" data-i18n="pubs.dev3.name">器械名</h4>
+              <div class="text-xs text-slate-500 mt-1" data-i18n="pubs.dev3.no">备案号</div>
+            </div>
+          </div>
+          <div class="p-5 rounded-lg border border-slate-200 bg-white hover:border-brand-600 transition flex items-start gap-4">
+            <div class="w-10 h-10 rounded-md bg-brand-50 text-brand-600 flex items-center justify-center shrink-0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+            <div>
+              <h4 class="font-semibold text-slate-900" data-i18n="pubs.dev4.name">器械名</h4>
+              <div class="text-xs text-slate-500 mt-1" data-i18n="pubs.dev4.no">备案号</div>
+            </div>
+          </div>
+          <div class="p-5 rounded-lg border border-slate-200 bg-white hover:border-brand-600 transition flex items-start gap-4">
+            <div class="w-10 h-10 rounded-md bg-brand-50 text-brand-600 flex items-center justify-center shrink-0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+            <div>
+              <h4 class="font-semibold text-slate-900" data-i18n="pubs.dev5.name">器械名</h4>
+              <div class="text-xs text-slate-500 mt-1" data-i18n="pubs.dev5.no">备案号</div>
+            </div>
+          </div>
+          <div class="p-5 rounded-lg border border-slate-200 bg-white hover:border-brand-600 transition flex items-start gap-4">
+            <div class="w-10 h-10 rounded-md bg-brand-50 text-brand-600 flex items-center justify-center shrink-0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+            <div>
+              <h4 class="font-semibold text-slate-900" data-i18n="pubs.dev6.name">器械名</h4>
+              <div class="text-xs text-slate-500 mt-1" data-i18n="pubs.dev6.no">备案号</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projects (10) -->
+      <div class="tab-panel" data-panel="projects">
+        <div class="text-sm text-slate-600 mb-5" data-i18n="pubs.proj.subtitle">国家级 / 省部级项目</div>
+        <div class="space-y-3">
+          <article class="pub-item bg-white p-5 pl-6 rounded-r-lg">
+            <h4 class="font-semibold text-slate-900 leading-snug" data-i18n="pubs.pj1.title">项目题目</h4>
+            <div class="text-xs text-slate-500 mt-1.5" data-i18n="pubs.pj1.meta">负责人 · 类别 · 经费</div>
+          </article>
+          <article class="pub-item bg-white p-5 pl-6 rounded-r-lg">
+            <h4 class="font-semibold text-slate-900 leading-snug" data-i18n="pubs.pj2.title">项目题目</h4>
+            <div class="text-xs text-slate-500 mt-1.5" data-i18n="pubs.pj2.meta">负责人 · 类别 · 经费</div>
+          </article>
+          <article class="pub-item bg-white p-5 pl-6 rounded-r-lg">
+            <h4 class="font-semibold text-slate-900 leading-snug" data-i18n="pubs.pj3.title">项目题目</h4>
+            <div class="text-xs text-slate-500 mt-1.5" data-i18n="pubs.pj3.meta">负责人 · 类别 · 经费</div>
+          </article>
+          <article class="pub-item bg-white p-5 pl-6 rounded-r-lg">
+            <h4 class="font-semibold text-slate-900 leading-snug" data-i18n="pubs.pj4.title">项目题目</h4>
+            <div class="text-xs text-slate-500 mt-1.5" data-i18n="pubs.pj4.meta">负责人 · 类别 · 经费</div>
+          </article>
+          <article class="pub-item bg-white p-5 pl-6 rounded-r-lg">
+            <h4 class="font-semibold text-slate-900 leading-snug" data-i18n="pubs.pj5.title">项目题目</h4>
+            <div class="text-xs text-slate-500 mt-1.5" data-i18n="pubs.pj5.meta">负责人 · 类别 · 经费</div>
+          </article>
+          <article class="pub-item bg-white p-5 pl-6 rounded-r-lg">
+            <h4 class="font-semibold text-slate-900 leading-snug" data-i18n="pubs.pj6.title">项目题目</h4>
+            <div class="text-xs text-slate-500 mt-1.5" data-i18n="pubs.pj6.meta">负责人 · 类别 · 经费</div>
+          </article>
+          <article class="pub-item bg-white p-5 pl-6 rounded-r-lg">
+            <h4 class="font-semibold text-slate-900 leading-snug" data-i18n="pubs.pj7.title">项目题目</h4>
+            <div class="text-xs text-slate-500 mt-1.5" data-i18n="pubs.pj7.meta">负责人 · 类别 · 经费</div>
+          </article>
+          <article class="pub-item bg-white p-5 pl-6 rounded-r-lg">
+            <h4 class="font-semibold text-slate-900 leading-snug" data-i18n="pubs.pj8.title">项目题目</h4>
+            <div class="text-xs text-slate-500 mt-1.5" data-i18n="pubs.pj8.meta">负责人 · 类别 · 经费</div>
+          </article>
+          <article class="pub-item bg-white p-5 pl-6 rounded-r-lg">
+            <h4 class="font-semibold text-slate-900 leading-snug" data-i18n="pubs.pj9.title">项目题目</h4>
+            <div class="text-xs text-slate-500 mt-1.5" data-i18n="pubs.pj9.meta">负责人 · 类别 · 经费</div>
+          </article>
+          <article class="pub-item bg-white p-5 pl-6 rounded-r-lg">
+            <h4 class="font-semibold text-slate-900 leading-snug" data-i18n="pubs.pj10.title">项目题目</h4>
+            <div class="text-xs text-slate-500 mt-1.5" data-i18n="pubs.pj10.meta">负责人 · 类别 · 经费</div>
+          </article>
+        </div>
       </div>
     </div>
   </section>
@@ -422,12 +759,9 @@
       <div class="reveal">
         <div class="text-xs font-semibold uppercase tracking-wider text-accent-500 mb-2" data-i18n="contact.eyebrow">联系我们</div>
         <h2 class="font-serif text-3xl md:text-4xl font-bold section-title" data-i18n="contact.title">合作 · 招生 · 来访</h2>
-        <p class="mt-5 text-brand-100/90 leading-relaxed" data-i18n="contact.body">
-          欢迎学术合作、产业转化、研究生与博士后申请。
-          请通过下方邮箱与我们联系，我们会在 3 个工作日内回复。
-        </p>
+        <p class="mt-5 text-brand-100/90 leading-relaxed" data-i18n="contact.body">欢迎学术合作、产业转化、研究生与博士后申请。</p>
 
-        <div class="mt-8 space-y-4 text-sm">
+        <div class="mt-8 space-y-5 text-sm">
           <div class="flex items-start gap-3">
             <svg class="mt-0.5 text-accent-500 shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
             <div>
@@ -436,17 +770,17 @@
             </div>
           </div>
           <div class="flex items-start gap-3">
-            <svg class="mt-0.5 text-accent-500 shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92V21a1 1 0 01-1.09 1A19.86 19.86 0 012 4.09 1 1 0 013 3h4.09a1 1 0 011 .75l1 4a1 1 0 01-.27 1L7 10.5a16 16 0 006 6l1.75-1.82a1 1 0 011-.27l4 1a1 1 0 01.75 1z"/></svg>
-            <div>
-              <div class="font-semibold" data-i18n="contact.tel.t">电话</div>
-              <div class="text-brand-100/80 mt-0.5" data-i18n="contact.tel.v">+86-851-XXXX-XXXX</div>
-            </div>
-          </div>
-          <div class="flex items-start gap-3">
             <svg class="mt-0.5 text-accent-500 shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6L12 13 2 6"/></svg>
             <div>
               <div class="font-semibold" data-i18n="contact.mail.t">邮箱</div>
-              <a href="mailto:bonelab@gmu.edu.cn" class="text-brand-100/80 hover:text-white mt-0.5 block" data-i18n="contact.mail.v">bonelab@gmu.edu.cn</a>
+              <a href="mailto:bonelab@gmc.edu.cn" class="text-brand-100/80 hover:text-white mt-0.5 block" data-i18n="contact.mail.v">bonelab@gmc.edu.cn</a>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="mt-0.5 text-accent-500 shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V7M3 7l9 6 9-6M3 7a2 2 0 012-2h14a2 2 0 012 2"/></svg>
+            <div>
+              <div class="font-semibold" data-i18n="contact.coop.t">产业合作</div>
+              <div class="text-brand-100/80 mt-0.5" data-i18n="contact.coop.v">已与多家企业签订产学研合作</div>
             </div>
           </div>
         </div>
@@ -484,11 +818,11 @@
   <!-- ============== FOOTER ============== -->
   <footer class="bg-brand-900 text-brand-100/70 py-8">
     <div class="container-x flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
-      <div data-i18n="footer.copy">© 2026 贵州医科大学骨科医工融合与临床转化实验室. All rights reserved.</div>
+      <div data-i18n="footer.copy">© 2026 贵州医科大学骨科医工融合与临床转化重点实验室. All rights reserved.</div>
       <div class="flex gap-6">
         <a href="#home" class="hover:text-white" data-i18n="nav.home">首页</a>
         <a href="#contact" class="hover:text-white" data-i18n="nav.contact">联系我们</a>
-        <a href="https://www.gmu.edu.cn/" target="_blank" rel="noopener" class="hover:text-white">GMU</a>
+        <a href="https://www.gmc.edu.cn/" target="_blank" rel="noopener" class="hover:text-white">GMU</a>
       </div>
     </div>
   </footer>

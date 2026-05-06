@@ -64,6 +64,20 @@
       reveals.forEach((el) => el.classList.add('visible'));
     }
 
+    /* -------- Publications tab switch -------- */
+    const tabContainer = document.getElementById('pub-tabs');
+    if (tabContainer) {
+      const buttons = tabContainer.querySelectorAll('.tab-btn');
+      const panels = document.querySelectorAll('.tab-panel');
+      buttons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const target = btn.getAttribute('data-tab');
+          buttons.forEach((b) => b.classList.toggle('active', b === btn));
+          panels.forEach((p) => p.classList.toggle('active', p.getAttribute('data-panel') === target));
+        });
+      });
+    }
+
     /* -------- Contact form (mailto fallback) -------- */
     const form = document.getElementById('contact-form');
     if (form) {

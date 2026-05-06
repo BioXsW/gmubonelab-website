@@ -11,3 +11,7 @@ dist/
 .cache/
 .env
 .env.local
+
+# Claude 内部备忘录（不公开）
+CLAUDE.md
+memory/
