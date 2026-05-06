@@ -14,6 +14,7 @@ window.I18N = {
     'nav.about': '实验室简介',
     'nav.members': '团队成员',
     'nav.publications': '科研产出',
+    'nav.gallery': '实验掠影',
     'nav.contact': '联系我们',
 
     /* ============ Hero ============ */
@@ -300,6 +301,27 @@ window.I18N = {
     'pubs.pj10.title': '基于三维近场生物电纺技术构建移行结构化肌腱复合物',
     'pubs.pj10.meta': '杨龙 · 国自然青年基金 · 2019–2021 · 21 万',
 
+    /* ============ Gallery ============ */
+    'gallery.eyebrow': '实验掠影',
+    'gallery.title': 'Gallery',
+    'gallery.subtitle': '团队合影 · 学术活动 · 临床转化产品。点击图片查看大图。',
+    'gallery.g01.title': '团队博览会合影 · 2021',
+    'gallery.g02.title': '实验室一角',
+    'gallery.g03.title': '学术活动 · 2021.09',
+    'gallery.g04.title': '学术活动 · 2021.09',
+    'gallery.g05.title': '学术活动 · 2021.09',
+    'gallery.g06.title': '团队活动 · 2020.07',
+    'gallery.g07.title': '团队活动 · 2020.07',
+    'gallery.g08.title': '团队活动 · 2020.07',
+    'gallery.g09.title': '团队活动 · 2020.07',
+    'gallery.g10.title': '团队活动 · 2020.07',
+    'gallery.g11.title': '团队活动 · 2020.07',
+    'gallery.g12.title': '团队活动 · 2020.07',
+    'gallery.g13.title': 'HA 类骨修复耗材',
+    'gallery.g14.title': '自主研发骨科器械',
+    'gallery.g15.title': '瑞维 · 临床转化产品',
+    'gallery.g16.title': '防滑膜 · 临床转化产品',
+
     /* ============ Contact ============ */
     'contact.eyebrow': '联系我们',
     'contact.title': '合作 · 招生 · 来访',
@@ -332,6 +354,7 @@ window.I18N = {
     'nav.about': 'About',
     'nav.members': 'Members',
     'nav.publications': 'Outputs',
+    'nav.gallery': 'Gallery',
     'nav.contact': 'Contact',
 
     'hero.eyebrow': 'Guizhou Medical University · Key Laboratory',
@@ -602,6 +625,26 @@ window.I18N = {
 
     'pubs.pj10.title': 'Tendon complex with transitional structure via 3D near-field bio-electrospinning',
     'pubs.pj10.meta': 'Yang L · NSFC Youth · 2019–2021 · 210k CNY',
+
+    'gallery.eyebrow': 'Gallery',
+    'gallery.title': 'Lab Gallery',
+    'gallery.subtitle': 'Team photos, academic events and clinically translated products. Click any image to enlarge.',
+    'gallery.g01.title': 'Team photo · 2021 Expo',
+    'gallery.g02.title': 'Lab interior',
+    'gallery.g03.title': 'Academic activity · 2021.09',
+    'gallery.g04.title': 'Academic activity · 2021.09',
+    'gallery.g05.title': 'Academic activity · 2021.09',
+    'gallery.g06.title': 'Team event · 2020.07',
+    'gallery.g07.title': 'Team event · 2020.07',
+    'gallery.g08.title': 'Team event · 2020.07',
+    'gallery.g09.title': 'Team event · 2020.07',
+    'gallery.g10.title': 'Team event · 2020.07',
+    'gallery.g11.title': 'Team event · 2020.07',
+    'gallery.g12.title': 'Team event · 2020.07',
+    'gallery.g13.title': 'HA bone-repair consumable',
+    'gallery.g14.title': 'In-house orthopedic device',
+    'gallery.g15.title': 'Ruiwei · clinical product',
+    'gallery.g16.title': 'Anti-slip membrane · clinical product',
 
     'contact.eyebrow': 'Contact',
     'contact.title': 'Collaborate · Apply · Visit',

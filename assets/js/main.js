@@ -78,6 +78,80 @@
       });
     }
 
+    /* -------- Gallery carousel + lightbox -------- */
+    const track = document.getElementById('gallery-track');
+    if (track) {
+      // Carousel arrows scroll one card at a time
+      const galleryPrev = document.getElementById('gallery-prev');
+      const galleryNext = document.getElementById('gallery-next');
+      const scrollByOne = (dir) => {
+        const item = track.querySelector('.gallery-item');
+        const step = item ? item.getBoundingClientRect().width + 16 : 320;
+        track.scrollBy({ left: dir * step, behavior: 'smooth' });
+      };
+      if (galleryPrev) galleryPrev.addEventListener('click', () => scrollByOne(-1));
+      if (galleryNext) galleryNext.addEventListener('click', () => scrollByOne(1));
+
+      // Photo data — full image filenames in order matching data-gallery-idx 0..15
+      const PHOTOS = [
+        '01-team-2021-expo', '02-lab-interior',
+        '03-event-2021a', '04-event-2021b', '05-event-2021c',
+        '06-event-2020a', '07-event-2020b', '08-event-2020c',
+        '09-event-2020d', '10-event-2020e', '11-event-2020f', '12-event-2020g',
+        '13-product-ha', '14-product-device', '15-product-ruiwei', '16-product-antislip',
+      ];
+
+      const lightbox = document.getElementById('gallery-lightbox');
+      const lbImg    = document.getElementById('gallery-lightbox-img');
+      const lbCap    = document.getElementById('gallery-lightbox-caption');
+      const lbClose  = document.getElementById('gallery-lightbox-close');
+      const lbPrev   = document.getElementById('gallery-lightbox-prev');
+      const lbNext   = document.getElementById('gallery-lightbox-next');
+      let currentIdx = 0;
+
+      const captionFor = (idx) => {
+        const key = `gallery.g${String(idx + 1).padStart(2, '0')}.title`;
+        return (I18N[currentLang] && I18N[currentLang][key]) || '';
+      };
+      const showLightbox = (idx) => {
+        currentIdx = (idx + PHOTOS.length) % PHOTOS.length;
+        lbImg.src = `/assets/img/gallery/full-${PHOTOS[currentIdx]}.jpg`;
+        lbCap.textContent = captionFor(currentIdx);
+        lightbox.classList.remove('hidden');
+        lightbox.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      };
+      const hideLightbox = () => {
+        lightbox.classList.add('hidden');
+        lightbox.classList.remove('flex');
+        document.body.style.overflow = '';
+      };
+
+      track.querySelectorAll('.gallery-item').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const i = parseInt(btn.getAttribute('data-gallery-idx'), 10) || 0;
+          showLightbox(i);
+        });
+      });
+
+      if (lbClose) lbClose.addEventListener('click', hideLightbox);
+      if (lbPrev)  lbPrev.addEventListener('click',  () => showLightbox(currentIdx - 1));
+      if (lbNext)  lbNext.addEventListener('click',  () => showLightbox(currentIdx + 1));
+
+      // Click outside image to close
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) hideLightbox();
+      });
+
+      // Keyboard support
+      document.addEventListener('keydown', (e) => {
+        if (lightbox.classList.contains('hidden')) return;
+        if (e.key === 'Escape')      hideLightbox();
+        if (e.key === 'ArrowLeft')   showLightbox(currentIdx - 1);
+        if (e.key === 'ArrowRight')  showLightbox(currentIdx + 1);
+      });
+    }
+
     /* -------- Contact form (mailto fallback) -------- */
     const form = document.getElementById('contact-form');
     if (form) {
