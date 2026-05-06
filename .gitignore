@@ -1,0 +1,13 @@
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
+Thumbs.db
+
+# Node (如果以后引入构建工具)
+node_modules/
+dist/
+.cache/
+.env
+.env.local

@@ -1,0 +1,5 @@
+# Cloudflare Pages redirects
+# 把根域名 gmubonelab.org 永久重定向到 www.gmubonelab.org（在 Cloudflare DNS 处也会配一条）
+https://gmubonelab.org/*  https://www.gmubonelab.org/:splat  301
+
+# 404 fallback (Pages 默认会返回 404.html，如有自定义可加在这里)
